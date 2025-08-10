@@ -229,9 +229,9 @@ export default function NewTransfer() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 flex">
       {/* Sidebar */}
-      <div className="w-64 bg-white dark:bg-slate-800 border-r-2 border-gray-300 dark:border-gray-600 flex flex-col shadow-lg">
+      <div className="w-64 bg-white dark:bg-slate-800 border-r-2 border-gray-200 dark:border-gray-600 flex flex-col shadow-lg relative">
         {/* Logo */}
-        <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+        <div className="p-6 border-b border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-slate-700/50">
           <div className="flex items-center space-x-3">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-xl">
               <Cloud className="h-6 w-6 text-white" />
@@ -243,7 +243,7 @@ export default function NewTransfer() {
         </div>
 
         {/* Cloud Providers */}
-        <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+        <div className="p-4 border-b border-gray-200 dark:border-gray-600 bg-gray-50/50 dark:bg-slate-700/30">
           <div className="space-y-3">
             {cloudProviders.map((provider) => (
               <div key={provider.id} className="flex items-center justify-between">
@@ -262,7 +262,7 @@ export default function NewTransfer() {
         </div>
 
         {/* Navigation */}
-        <div className="flex-1 p-4">
+        <div className="flex-1 p-4 bg-white dark:bg-slate-700/20">
           <div className="space-y-1">
             <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
               Navigation
@@ -285,7 +285,7 @@ export default function NewTransfer() {
         </div>
 
         {/* User Profile */}
-        <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+        <div className="p-4 border-t border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-slate-700/50">
           <div className="flex items-center space-x-3 mb-3">
             <div className="bg-gray-100 dark:bg-gray-700 p-2 rounded-full">
               <User className="h-4 w-4 text-gray-600 dark:text-gray-300" />
@@ -314,7 +314,7 @@ export default function NewTransfer() {
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         {/* Header */}
-        <header className="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-gray-700 px-6 py-6">
+        <header className="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-gray-600 px-6 py-4 shadow-md">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">

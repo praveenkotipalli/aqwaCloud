@@ -14,6 +14,7 @@ import {
   Zap, Globe, Timer, Users, Lock, Check, Star, Building,
   Mail, Phone, MessageSquare, Send, MapPin, Clock, HeadphonesIcon, CheckCircle
 } from 'lucide-react'
+import { HeroBackground, AnimatedBackground } from '@/components/ui/animated-background'
 
 export default function Home() {
   const { user, logout } = useAuth()
@@ -105,7 +106,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="pt-24 pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      <HeroBackground className="pt-24 pb-20">
         <div className="container mx-auto px-6 py-20">
           <div className="text-center max-w-6xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
@@ -133,10 +134,10 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </HeroBackground>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-gradient-to-b from-slate-100 to-slate-200 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800">
+      <AnimatedBackground className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -171,7 +172,7 @@ export default function Home() {
             ].map((feature, index) => (
               <div 
                 key={index} 
-                className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-gray-200 dark:border-slate-600 p-8 shadow-2xl hover:shadow-3xl hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-3 hover:scale-105"
+                className="bg-white/95 dark:bg-slate-800 rounded-2xl border-2 border-gray-300 dark:border-slate-600 p-8 shadow-2xl hover:shadow-3xl hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-3 hover:scale-105 backdrop-blur-sm"
               >
                 <div className="text-center">
                   <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded-2xl w-fit mx-auto mb-6">
@@ -202,24 +203,24 @@ export default function Home() {
               { icon: Lock, title: "Access Controls", desc: "Granular permissions" },
               { icon: Cloud, title: "Multi-Cloud", desc: "20+ cloud providers" }
             ].map((feature, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-all">
+              <Card key={index} className="p-6 shadow-lg hover:shadow-xl transition-all bg-white/95 dark:bg-slate-800 border-2 border-gray-300 dark:border-slate-600 backdrop-blur-sm">
                 <div className="flex items-start space-x-4">
                   <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
                     <feature.icon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">{feature.title}</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{feature.desc}</p>
+                    <h4 className="font-semibold mb-1 text-gray-900 dark:text-white">{feature.title}</h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">{feature.desc}</p>
                   </div>
                 </div>
               </Card>
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedBackground>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-gradient-to-b from-slate-100 to-slate-200 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800">
+      <AnimatedBackground className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -251,10 +252,10 @@ export default function Home() {
             ].map((plan, index) => (
               <div 
                 key={index} 
-                className={`relative bg-white dark:bg-slate-800 rounded-2xl border-2 p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-3 hover:scale-105 ${
+                className={`relative bg-white/95 dark:bg-slate-800 rounded-2xl border-2 p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-3 hover:scale-105 backdrop-blur-sm ${
                   plan.popular 
                     ? 'border-blue-400 dark:border-blue-500 ring-2 ring-blue-400 dark:ring-blue-500 ring-opacity-50' 
-                    : 'border-gray-200 dark:border-slate-600 hover:border-blue-400 dark:hover:border-blue-500'
+                    : 'border-gray-300 dark:border-slate-600 hover:border-blue-400 dark:hover:border-blue-500'
                 }`}
               >
                 {plan.popular && (
@@ -289,10 +290,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedBackground>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white dark:bg-slate-900">
+      <AnimatedBackground className="py-20 bg-white dark:bg-slate-900">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -427,7 +428,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedBackground>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
